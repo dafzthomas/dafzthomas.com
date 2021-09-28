@@ -16,10 +16,10 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
             <NextSeo
                 title="Blog - Dafydd Thomas"
                 description="Web developer"
-                canonical={`https://dafzthomas.com/blog`}
+                canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/blog`}
                 openGraph={{
                     type: 'website',
-                    url: `https://dafzthomas.com/blog`,
+                    url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
                     title: 'Blog - Dafydd Thomas',
                     description: 'Web developer',
                     site_name: 'Dafydd Thomas - Personal website',
