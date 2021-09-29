@@ -33,15 +33,24 @@ export default function PostPage({ meta, code }: Post) {
     return (
         <PageLayout>
             <NextSeo
-                title={`${meta.title} - Dafydd Thomas`}
+                title={`${meta.title} | Dafydd Thomas`}
                 description={meta.description}
                 canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/blog/${meta.slug}`}
                 openGraph={{
                     type: 'website',
                     url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${meta.slug}`,
-                    title: `${meta.title} - Dafydd Thomas`,
+                    title: `${meta.title} | Dafydd Thomas`,
                     description: meta.description,
                     site_name: 'Dafydd Thomas',
+                    profile: {
+                        firstName: 'Dafydd',
+                        lastName: 'Thomas',
+                        username: 'dafzthomas',
+                    },
+                    article: {
+                        publishedTime: meta.publishedAt,
+                        modifiedTime: meta.updatedAt,
+                    },
                 }}
                 twitter={{
                     handle: '@dafzthomas',

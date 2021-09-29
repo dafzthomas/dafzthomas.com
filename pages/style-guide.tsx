@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import React from 'react';
 import PageLayout from '../components/layout/PageLayout';
@@ -14,6 +15,8 @@ const StyleGuidePage: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+            <NextSeo noindex nofollow />
 
             <main>
                 <h1>Heading 1</h1>

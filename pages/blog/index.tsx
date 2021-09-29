@@ -14,15 +14,20 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
     return (
         <PageLayout>
             <NextSeo
-                title="Blog - Dafydd Thomas"
+                title="Blog | Dafydd Thomas"
                 description="Web developer"
                 canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/blog`}
                 openGraph={{
                     type: 'website',
                     url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
-                    title: 'Blog - Dafydd Thomas',
+                    title: 'Blog | Dafydd Thomas',
                     description: 'Web developer',
-                    site_name: 'Dafydd Thomas - Personal website',
+                    site_name: 'Dafydd Thomas | Personal website',
+                    profile: {
+                        firstName: 'Dafydd',
+                        lastName: 'Thomas',
+                        username: 'dafzthomas',
+                    },
                 }}
                 twitter={{
                     handle: '@dafzthomas',
@@ -33,8 +38,8 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
             <section className="space-y-8">
                 {posts.map(post => (
                     <article key={post.slug} className="">
-                        <h3>{post.title}</h3>
-                        <p>{post.description}</p>
+                        <h3 className="mb-1">{post.title}</h3>
+                        <p className="mt-0">{post.description}</p>
                         <Link href={`/blog/${post.slug}`}>
                             <a>Read post</a>
                         </Link>
