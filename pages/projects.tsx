@@ -23,7 +23,9 @@ const ProjectsPage: NextPage = () => {
                     </p>
 
                     <Link href="https://readrrr.co/">
-                        Go to project website
+                        <a target="_blank" referrerPolicy="no-referrer">
+                            Go to project website
+                        </a>
                     </Link>
                 </article>
             </section>
