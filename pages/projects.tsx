@@ -7,11 +7,31 @@ import PageLayout from '../components/layout/PageLayout';
 const ProjectsPage: NextPage = () => {
     return (
         <PageLayout>
-            <NextSeo noindex nofollow />
+            <NextSeo
+                title="Projects - Dafydd Thomas"
+                description="Web developer"
+                canonical={`${process.env.NEXT_PUBLIC_SITE_URL}`}
+                openGraph={{
+                    type: 'website',
+                    url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+                    title: 'Projects - Dafydd Thomas',
+                    description: 'Web developer',
+                    site_name: 'Dafydd Thomas | Personal Website',
+                    profile: {
+                        firstName: 'Dafydd',
+                        lastName: 'Thomas',
+                        username: 'dafzthomas',
+                    },
+                }}
+                twitter={{
+                    handle: '@dafzthomas',
+                    cardType: 'summary_large_image',
+                }}
+            />
 
             <section>
                 <article className="dark:bg-gray-800 drop-shadow-md border-2 bg-white rounded-md p-3">
-                    <h3>readrrr</h3>
+                    <h2>readrrr</h2>
                     <p>a simple web rss reader</p>
 
                     <p>
