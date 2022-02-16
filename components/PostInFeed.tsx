@@ -9,7 +9,7 @@ interface Props {
 const PostInFeed = ({ post }: Props) => {
     return (
         <article key={post.slug} className="">
-            <h3 className="mb-1">{post.title}</h3>
+            <h2 className="mb-1 text-2xl">{post.title}</h2>
             <p className="mt-0 mb-2">{post.description}</p>
             <Link href={`/blog/${post.slug}`}>
                 <a>Read post</a>
