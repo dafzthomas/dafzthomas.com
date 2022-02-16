@@ -3,7 +3,7 @@ import React from 'react';
 import type { PostMeta } from '../../types/post';
 import PageLayout from '../../components/layout/PageLayout';
 import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import PostInFeed from '../../components/PostInFeed';
 
 export function getStaticProps() {
     const posts = getAllPostsMeta('post');
@@ -35,15 +35,9 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
                 }}
             />
 
-            <section className="space-y-8">
+            <section className="space-y-12">
                 {posts.map(post => (
-                    <article key={post.slug} className="">
-                        <h3 className="mb-1">{post.title}</h3>
-                        <p className="mt-0">{post.description}</p>
-                        <Link href={`/blog/${post.slug}`}>
-                            <a>Read post</a>
-                        </Link>
-                    </article>
+                    <PostInFeed key={post.slug} post={post} />
                 ))}
             </section>
         </PageLayout>

@@ -28,8 +28,6 @@ const Home: NextPage = () => {
                     cardType: 'summary_large_image',
                 }}
             />
-
-            <p>Hello, I&apos;m Dafydd.</p>
         </PageLayout>
     );
 };

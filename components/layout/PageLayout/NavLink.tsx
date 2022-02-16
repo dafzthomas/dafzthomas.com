@@ -9,9 +9,13 @@ const NavLink: FC<LinkProps> = ({ children, ...props }) => {
         <Link {...props} passHref>
             <a>
                 <span
-                    className={`pb-1
-                    ${activeLink ? 'border-b-2 border-purple-500' : ''}
-                `}
+                    className={`
+                        ${
+                            activeLink
+                                ? 'underline underline-offset-4 decoration-blue-600 dark:decoration-blue-500'
+                                : ''
+                        }
+                    `}
                 >
                     {children}
                 </span>

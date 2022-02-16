@@ -56,7 +56,8 @@ export const getPostBySlug = async (slug: string) => {
         'utf8',
     );
 
-    const { code, frontmatter } = await bundleMDX(source, {
+    const { code, frontmatter } = await bundleMDX({
+        source,
         xdmOptions(options) {
             options.remarkPlugins = [
                 ...(options?.remarkPlugins ?? []),

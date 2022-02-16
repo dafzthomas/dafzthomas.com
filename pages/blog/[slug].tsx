@@ -31,7 +31,7 @@ export default function PostPage({ meta, code }: Post) {
     const Component = useMemo(() => getMDXComponent(code), [code]);
 
     return (
-        <PageLayout>
+        <PageLayout readerMode>
             <NextSeo
                 title={`${meta.title} | Dafydd Thomas`}
                 description={meta.description}
@@ -58,11 +58,10 @@ export default function PostPage({ meta, code }: Post) {
                 }}
             />
 
-            <h2>{meta.title}</h2>
-            <div className="space-y-1 mt-3">
-                <p className="m-0">
-                    Published{' '}
-                    <span className="font-semibold">
+            <h2 className="text-4xl">{meta.title}</h2>
+            <aside className="space-y-1 mt-3">
+                <p className="m-0 dark:text-gray-400">
+                    <span className="font-semibold ">
                         {format(parseISO(meta.publishedAt), 'MMMM dd, yyyy')}
                     </span>
                 </p>
@@ -74,7 +73,7 @@ export default function PostPage({ meta, code }: Post) {
                         </span>
                     </p>
                 )}
-            </div>
+            </aside>
 
             <Component components={components} />
         </PageLayout>
