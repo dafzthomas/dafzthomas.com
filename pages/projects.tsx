@@ -10,7 +10,7 @@ const ProjectsPage: NextPage = () => {
             <NextSeo
                 title="Projects - Dafydd Thomas"
                 description="Web developer"
-                canonical={`${process.env.NEXT_PUBLIC_SITE_URL}`}
+                canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/projects`}
                 openGraph={{
                     type: 'website',
                     url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
