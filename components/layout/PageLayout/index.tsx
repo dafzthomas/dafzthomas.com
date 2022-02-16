@@ -79,7 +79,7 @@ const PageLayout: FC<{ readerMode?: boolean }> = ({
             <main className="flex-1 w-full max-w-screen-sm mx-auto px-4">
                 {children}
             </main>
-            <footer className="mt-8">
+            <footer className="mt-8 text-center">
                 <div className="max-w-screen-sm mx-auto p-4 border-t-2">
                     <p>Made with ❤️&nbsp; in 🏴󠁧󠁢󠁷󠁬󠁳󠁿&nbsp; by Dafydd Thomas</p>
                 </div>
