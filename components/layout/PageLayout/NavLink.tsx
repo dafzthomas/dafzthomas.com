@@ -10,11 +10,7 @@ const NavLink: FC<LinkProps> = ({ children, ...props }) => {
             <a>
                 <span
                     className={`
-                        ${
-                            activeLink
-                                ? 'underline underline-offset-4 decoration-blue-600 dark:decoration-blue-500'
-                                : ''
-                        }
+                        ${activeLink ? 'underline underline-offset-4' : ''}
                     `}
                 >
                     {children}
