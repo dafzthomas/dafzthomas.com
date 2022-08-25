@@ -1,8 +1,11 @@
 import Link, { LinkProps } from 'next/link';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import useActiveLink from '../../../hooks/useActiveLink';
 
-const NavLink: FC<LinkProps> = ({ children, ...props }) => {
+const NavLink: FC<LinkProps & { children: ReactNode | ReactNode[] }> = ({
+    children,
+    ...props
+}) => {
     const activeLink = useActiveLink(props.href as string);
 
     return (

@@ -1,13 +1,25 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, ReactNode, useEffect, useState } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import DarkModeSwitch from '../../DarkModeSwitch';
 
-const PageLayout: FC<{ readerMode?: boolean }> = ({
-    children,
-    readerMode = false,
-}) => {
-    const [theme, setTheme] = useState('');
+const PageLayout: FC<{
+    children: ReactNode | ReactNode[];
+    readerMode?: boolean;
+}> = ({ children, readerMode = false }) => {
+    const [theme, setTheme] = useState<string | Function>(() => {
+        // if (
+        //     window.sessionStorage.theme === 'dark' ||
+        //     (!('theme' in window.sessionStorage) &&
+        //         window.matchMedia('(prefers-color-scheme: dark)').matches)
+        // ) {
+        //     document.documentElement.classList.add('dark');
+        //     return 'dark';
+        // } else {
+        //     document.documentElement.classList.remove('dark');
+        //     return 'light';
+        // }
+    });
 
     const toggleDarkMode = () => {
         const root = document.documentElement;
@@ -15,28 +27,13 @@ const PageLayout: FC<{ readerMode?: boolean }> = ({
         if (root.classList.contains('dark')) {
             setTheme('light');
             root.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+            window.sessionStorage.setItem('theme', 'light');
         } else {
             setTheme('dark');
             root.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+            window.sessionStorage.setItem('theme', 'dark');
         }
     };
-
-    useEffect(() => {
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.documentElement.classList.add('dark');
-            setTheme('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            setTheme('light');
-        }
-    }, []);
 
     return (
         <div className="flex flex-col justify-between">
@@ -55,10 +52,10 @@ const PageLayout: FC<{ readerMode?: boolean }> = ({
                             >
                                 Dafydd Thomas
                             </h1>
-                            <DarkModeSwitch
+                            {/* <DarkModeSwitch
                                 darkMode={theme === 'dark'}
                                 toggleDarkMode={toggleDarkMode}
-                            />
+                            /> */}
                         </a>
                     </Link>
 

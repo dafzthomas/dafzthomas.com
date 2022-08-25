@@ -4,7 +4,7 @@
         <description><![CDATA[Dafydd Thomas]]></description>
         <link>https://dafzthomas.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 21 Jul 2022 09:05:22 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Aug 2022 13:22:48 GMT</lastBuildDate>
         <atom:link href="https://dafzthomas.com/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[A Cryptocurrency to look out for]]></title>
@@ -12,9 +12,9 @@
             <guid isPermaLink="true">https://dafzthomas.com/blog/cryptocurrency-to-look-out-for-kin</guid>
         </item>
         <item>
-            <title><![CDATA[Launched new project: readrrr!]]></title>
-            <link>https://dafzthomas.com/blog/launched-new-project</link>
-            <guid isPermaLink="true">https://dafzthomas.com/blog/launched-new-project</guid>
+            <title><![CDATA[React function component in TypeScript]]></title>
+            <link>https://dafzthomas.com/blog/react-function-component-in-typescript</link>
+            <guid isPermaLink="true">https://dafzthomas.com/blog/react-function-component-in-typescript</guid>
         </item>
         <item>
             <title><![CDATA[Cypress Testing]]></title>
@@ -27,9 +27,9 @@
             <guid isPermaLink="true">https://dafzthomas.com/blog/route-loading-custom-hook-nextjs</guid>
         </item>
         <item>
-            <title><![CDATA[React function component in TypeScript]]></title>
-            <link>https://dafzthomas.com/blog/react-function-component-in-typescript</link>
-            <guid isPermaLink="true">https://dafzthomas.com/blog/react-function-component-in-typescript</guid>
+            <title><![CDATA[Launched new project: readrrr!]]></title>
+            <link>https://dafzthomas.com/blog/launched-new-project</link>
+            <guid isPermaLink="true">https://dafzthomas.com/blog/launched-new-project</guid>
         </item>
     </channel>
 </rss>
